@@ -1,6 +1,12 @@
 pipeline {
     agent any
 
+    tools {
+        jdk 'jdk21'
+        nodejs 'node20'
+        maven 'maven3'
+    }
+
     stages {
 
         stage('Checkout') {
@@ -21,7 +27,8 @@ pipeline {
         stage('Build Frontend') {
             steps {
                 dir('frontend') {
-                    sh 'npm install && npm run build'
+                    sh 'npm install'
+                    sh 'npm run build'
                 }
             }
         }
