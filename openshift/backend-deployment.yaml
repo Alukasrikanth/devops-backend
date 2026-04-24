@@ -22,7 +22,9 @@ spec:
         - containerPort: 8081
         env:
         - name: SPRING_DATASOURCE_URL
-          value: jdbc:postgresql://banking-postgres:5432/banking
+          value: jdbc:postgresql://postgres-service:5432/banking
+        - name: SPRING_PROFILES_ACTIVE
+          value: k8s
         - name: SPRING_DATASOURCE_USERNAME
           value: postgres
         - name: SPRING_DATASOURCE_PASSWORD
