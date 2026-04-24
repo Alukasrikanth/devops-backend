@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: YOUR_DOCKER_REGISTRY/banking-frontend:latest
+        image: banking-frontend:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 3000
         env:
