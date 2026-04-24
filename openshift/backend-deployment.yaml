@@ -40,15 +40,7 @@ spec:
   selector:
     app: banking-backend
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 8081
       targetPort: 8081
----
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: banking-backend-route
-spec:
-  to:
-    kind: Service
-    name: banking-backend

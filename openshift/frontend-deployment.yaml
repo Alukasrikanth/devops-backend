@@ -32,15 +32,16 @@ spec:
   selector:
     app: banking-frontend
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 3000
       targetPort: 3000
----
-apiVersion: route.openshift.io/v1
-kind: Route
-metadata:
-  name: banking-frontend-route
-spec:
-  to:
-    kind: Service
-    name: banking-frontend
+# ---
+# apiVersion: route.openshift.io/v1
+# kind: Route
+# metadata:
+#   name: banking-frontend-route
+# spec:
+#   to:
+#     kind: Service
+#     name: banking-frontend
