@@ -27,7 +27,7 @@ export default function PaymentsDrawer({
 
     try {
       // Simulate backend call to the authorization endpoint
-      const res = await fetch("http://localhost:8081/api/payments/authorize", {
+      const res = await fetch("/api/payments/authorize", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
