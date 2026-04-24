@@ -29,7 +29,7 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true);
   const [showDrawer, setShowDrawer] = useState(false);
 
-  const { data: subData } = useSubscription(PAYMENTS_SUBSCRIPTION);
+  const { data: subData } = useSubscription<{ payments: any[] }>(PAYMENTS_SUBSCRIPTION);
 
   useEffect(() => {
     const session = getSession();
