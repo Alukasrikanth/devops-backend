@@ -29,6 +29,7 @@ kind: Service
 metadata:
   name: banking-frontend
 spec:
+  type: NodePort
   selector:
     app: banking-frontend
   ports:
@@ -36,6 +37,7 @@ spec:
       protocol: TCP
       port: 3000
       targetPort: 3000
+      nodePort: 30126
 # ---
 # apiVersion: route.openshift.io/v1
 # kind: Route
