@@ -1,0 +1,10 @@
+com/example/payments/payments/Payment.class
+com/example/payments/payments/events/PaymentAuthorizedEvent.class
+com/example/payments/payments/api/AuthorizePaymentResponse.class
+com/example/payments/config/CorsConfig.class
+com/example/payments/payments/PaymentRepository.class
+com/example/payments/config/KafkaConfig.class
+com/example/payments/payments/api/AuthorizePaymentRequest.class
+com/example/payments/payments/api/PaymentsController.class
+com/example/payments/payments/PaymentService.class
+com/example/payments/PaymentsServiceApplication.class
